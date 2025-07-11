@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php 
 
 require 'vendor/autoload.php';
@@ -16,28 +17,7 @@ $cursos = $buscador->buscar('/cursos-online-programacao/php');
 
 foreach ($cursos as $curso) 
 {
-    echo exibeMensagem($curso);
+    exibeMensagem($curso);
 }
 
-
-
-/**
- * > FORMA INICIAL DO NOSSO CÓDIGO NO CURSO:
- *
- * $client = new Client();
- *   $resposta = $client->request('GET', 'https://alura.com.br/cursos-online-programacao/php');
- *   
- *   $html = $resposta->getBody();
- *   
- *   $crawler = new Crawler();
- *   $crawler->addHtmlContent($html);
- *   
- *   $cursos = $crawler->filter('span.card-curso__nome');
- *   
- *   foreach ($cursos as $curso){
- *       echo $curso->textContent . PHP_EOL;
- *   }
- * 
- *     
-*/
 
